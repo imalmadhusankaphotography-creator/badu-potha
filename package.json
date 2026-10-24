@@ -1,0 +1,19 @@
+{
+  "name": "badu-potha",
+  "version": "1.0.0",
+  "private": true,
+  "description": "බඩු පොත — shopping tracker that reads Keells and Mahajana bill PDFs",
+  "scripts": {
+    "sync": "cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.5.3",
+    "@capacitor/app": "8.1.2",
+    "@capacitor/core": "8.5.3",
+    "@capacitor/filesystem": "8.1.5",
+    "@capacitor/share": "8.0.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.5.3"
+  }
+}

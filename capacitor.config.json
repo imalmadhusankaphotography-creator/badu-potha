@@ -1,0 +1,10 @@
+{
+  "appId": "com.imal.badupotha",
+  "appName": "බඩු පොත",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": false,
+    "captureInput": false,
+    "webContentsDebuggingEnabled": false
+  }
+}
