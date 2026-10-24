@@ -43,8 +43,8 @@ jobs:
       - name: Install packages
         run: npm ci --no-audit --no-fund
 
-      - name: Copy the app (www/index.html) into the Android project
-        run: npx cap sync android
+      - name: Copy the app (www/index.html + offline photo reader) into the Android project
+        run: npm run sync
 
       - name: Signing key
         env:
@@ -80,19 +80,19 @@ jobs:
       - name: Name the APK
         run: |
           mkdir -p dist
-          cp android/app/build/outputs/apk/release/app-release.apk "dist/BaduPotha-v1.0.${{ github.run_number }}.apk"
+          cp android/app/build/outputs/apk/release/app-release.apk "dist/ShoppingTracker-v1.0.${{ github.run_number }}.apk"
           ls -la dist
 
       - uses: actions/upload-artifact@v4
         with:
-          name: BaduPotha-apk
+          name: ShoppingTracker-apk
           path: dist/*.apk
 
       - name: Publish release (download the APK from the Releases page)
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v1.0.${{ github.run_number }}
-          name: බඩු පොත v1.0.${{ github.run_number }}
+          name: Shopping Tracker v1.0.${{ github.run_number }}
           body: |
             පහළ තියෙන `.apk` file එක phone එකට download කරලා install කරන්න.
           files: dist/*.apk

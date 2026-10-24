@@ -2,16 +2,19 @@
   "name": "badu-potha",
   "version": "1.0.0",
   "private": true,
-  "description": "බඩු පොත — shopping tracker that reads Keells and Mahajana bill PDFs",
+  "description": "Shopping Tracker — reads any supermarket bill (PDF or photo) and tracks spending",
   "scripts": {
-    "sync": "cap sync android"
+    "ocr": "node scripts/copy-ocr.js",
+    "sync": "node scripts/copy-ocr.js && cap sync android"
   },
   "dependencies": {
     "@capacitor/android": "8.5.3",
     "@capacitor/app": "8.1.2",
     "@capacitor/core": "8.5.3",
     "@capacitor/filesystem": "8.1.5",
-    "@capacitor/share": "8.0.3"
+    "@capacitor/share": "8.0.3",
+    "tesseract.js": "7.0.0",
+    "@tesseract.js-data/eng": "1.0.0"
   },
   "devDependencies": {
     "@capacitor/cli": "8.5.3"

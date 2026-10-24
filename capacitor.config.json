@@ -1,6 +1,6 @@
 {
   "appId": "com.imal.badupotha",
-  "appName": "බඩු පොත",
+  "appName": "Shopping Tracker",
   "webDir": "www",
   "android": {
     "allowMixedContent": false,
