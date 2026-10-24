@@ -1756,7 +1756,7 @@ if (typeof module !== 'undefined' && module.exports) module.exports = BillParser
         workerPath: absUrl('ocr/worker.min.js'),
         corePath: absUrl(wasmSimd() ? 'ocr/tesseract-core-simd-lstm.wasm.js' : 'ocr/tesseract-core-lstm.wasm.js'),
         langPath: absUrl('ocr/'),
-        gzip: true,
+        gzip: false,                      // Android's build un-gzips .gz assets, so the plain file is shipped
         workerBlobURL: false,
         logger: function (m) { if (ocrProgress && m && m.status === 'recognizing text') ocrProgress(m.progress); }
       });
